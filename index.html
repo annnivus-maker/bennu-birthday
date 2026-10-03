@@ -4,71 +4,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#100d14">
-<title>Bennu Birthday ♡</title>
+<meta name="theme-color" content="#fff0f4">
+<title>For Bennu ♡ | A Little Scrapbook</title>
 <style>
-:root{--bg:#100d14;--gold:#e9bd91;--cream:#f4e7d6;--muted:#bba9a1}
+:root{
+ --pink:#f6cbd8;--blush:#fff0f4;--rose:#c66d89;
+ --dark:#66394b;--paper:#fffaf4;--ink:#654957;
+ --lavender:#eee5f7;--peach:#ffe3d4;
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(ellipse at top,#38202d,transparent 55%),var(--bg);color:var(--cream);font-family:Georgia,"Times New Roman",serif;line-height:1.8}
-header{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#100d14ed;border-bottom:1px solid #ffffff18}
-.brand,.eyebrow,.label{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:11px}
+body{
+ margin:0;color:var(--ink);font-family:Georgia,"Times New Roman",serif;
+ background-color:#fff0f4;
+ background-image:radial-gradient(#e9b9c9 1px,transparent 1px);
+ background-size:18px 18px;line-height:1.8;
+}
+button,a{-webkit-tap-highlight-color:transparent}
 a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer}
-nav{display:none;position:absolute;right:12px;top:60px;background:#241722;padding:15px;border:1px solid #e9bd9144;border-radius:12px}
+header{
+ position:sticky;top:0;z-index:5;background:#fff8f2ed;
+ border-bottom:2px dashed #e9b5c6;padding:10px 17px;
+ display:flex;align-items:center;justify-content:space-between;
+}
+.brand{font-size:13px;letter-spacing:2px;color:var(--rose)}
+.menu{background:var(--pink);border:0;border-radius:50%;width:42px;height:42px;font-size:20px;color:var(--dark)}
+nav{display:none;position:absolute;right:12px;top:57px;background:var(--paper);border:1px solid var(--pink);border-radius:15px;padding:17px;box-shadow:0 7px 20px #8c52631c}
 nav.open{display:grid;gap:12px}
-.menu{border:1px solid #e9bd9166;border-radius:50%;background:transparent;color:var(--cream);width:42px;height:42px}
-section{max-width:720px;margin:auto;padding:75px 22px}
-.hero{min-height:88svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.moon{font-size:46px;color:var(--gold)}
-h1{font-size:clamp(43px,12vw,72px);font-weight:normal;line-height:1.1;margin:20px 0}
-h1 em,h2 em{color:var(--gold);font-weight:normal}
-h1 em{display:block}
-h2{font-size:clamp(30px,8vw,44px);font-weight:normal;line-height:1.25}
-p{color:#e2d2c8}
-.intro{max-width:390px;color:var(--muted)}
-.date{color:var(--gold);letter-spacing:4px;font-size:12px;margin:18px}
-.btn{display:inline-block;border:1px solid var(--gold);border-radius:28px;background:transparent;color:var(--cream);padding:11px 22px;margin:7px 4px}
-.primary{background:var(--gold);color:#21131a}
-.paper{background:#e8d5bd;color:#38251f;padding:27px 23px;box-shadow:0 15px 40px #0005;transform:rotate(-.4deg)}
-.paper p{color:#38251f}
-.paper h3{color:#59352e}
-.script{font-style:italic}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.photo{background:#211720;padding:8px 8px 12px;border:1px solid #e9bd9144;text-align:center;transform:rotate(-1deg)}
-.photo:nth-child(even){transform:rotate(1deg)}
-.photo img{width:100%;height:170px;object-fit:cover;display:block;background:linear-gradient(135deg,#49303b,#18131a)}
-.photo span{display:block;color:var(--gold);font-size:13px;padding-top:8px}
-.reason{padding:13px 0;border-bottom:1px solid #ffffff18}
-.reason b{color:var(--gold);margin-right:10px}
-.secret{display:none;margin-top:25px;border:1px dashed var(--gold);padding:23px;animation:fade .5s ease}
-.secret.show{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+nav a{padding:4px}
+section{max-width:720px;margin:auto;padding:62px 21px}
+.hero{text-align:center;min-height:88svh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.sticker{font-size:35px;transform:rotate(-12deg);display:inline-block}
+.tiny{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--rose)}
+h1{font-size:clamp(42px,11vw,70px);line-height:1.12;font-weight:normal;color:var(--dark);margin:18px 0}
+h1 em,h2 em{color:var(--rose);font-weight:normal}
+h2{font-size:clamp(31px,8vw,43px);line-height:1.25;font-weight:normal;color:var(--dark);margin:14px 0 20px}
+p{font-size:16px}
+.sub{max-width:360px;color:#8b6876}
+.date{background:var(--paper);border:1px dashed var(--rose);padding:8px 18px;transform:rotate(-2deg);margin:18px;color:var(--dark)}
+.btn{display:inline-block;border:1px solid var(--rose);border-radius:30px;background:var(--paper);color:var(--dark);padding:10px 19px;margin:6px;font:inherit;cursor:pointer}
+.btn.primary{background:var(--rose);color:white}
+.paper{background:var(--paper);border:1px solid #e8c5cf;padding:25px 23px;box-shadow:3px 5px 0 #e9c5d0;position:relative}
+.paper:before{content:"♡";position:absolute;right:13px;top:5px;color:var(--rose);font-size:22px}
+.tape{height:23px;width:85px;background:#f4c5d2c9;position:absolute;top:-11px;left:calc(50% - 42px);transform:rotate(-4deg)}
+.hand{font-style:italic;color:var(--rose)}
+.label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--rose)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.polaroid{background:white;padding:9px 9px 14px;box-shadow:2px 5px 12px #9b62721c;transform:rotate(-2deg);text-align:center}
+.polaroid:nth-child(even){transform:rotate(2deg);margin-top:15px}
+.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:linear-gradient(140deg,#f7d9e3,#f9ebde)}
+.polaroid p{font-size:13px;margin:8px 0 0}
+.note{background:var(--lavender);padding:19px;border-radius:3px;transform:rotate(1deg);margin:20px 0}
+.note:nth-child(even){background:var(--peach);transform:rotate(-1deg)}
+.reason{padding:13px 0;border-bottom:1px dashed #dfb8c5}
+.reason span{color:var(--rose);margin-right:9px}
 .center{text-align:center}
-footer{text-align:center;padding:35px 15px 90px;color:var(--muted)}
-#stars{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:-1}
-@media(min-width:600px){section{padding:95px 30px}.paper{padding:40px}.photo img{height:230px}}
+.secret{display:none;margin-top:22px}
+.secret.show{display:block;animation:appear .6s ease}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+footer{text-align:center;padding:40px 18px 95px;color:#a47888}
+#musicButton{position:fixed;bottom:13px;right:12px;z-index:6;background:#fffaf4;border:1px solid var(--rose);box-shadow:0 3px 10px #6b3a4b20}
+@media(min-width:600px){section{padding:80px 30px}.paper{padding:38px}.polaroid img{aspect-ratio:4/3}}
 </style>
 </head>
 <body>
-<canvas id="stars"></canvas>
 <header>
-<a class="brand" href="#home">FOR BENNU ♡</a>
-<button class="menu" id="menuButton" aria-label="Open menu">☰</button>
-<nav id="menu">
-<a href="#letter">The letter</a><a href="#memories">Our memories</a><a href="#reasons">Little things</a><a href="#gallery">Gallery</a><a href="#surprise">Secret surprise</a>
+<a class="brand" href="#home">A LITTLE BOOK OF US ♡</a>
+<button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+<nav id="nav">
+<a href="#letter">💌 The letter</a>
+<a href="#photos">📸 Our scrapbook</a>
+<a href="#reasons">💕 Little things</a>
+<a href="#wishes">🎀 Birthday wishes</a>
+<a href="#secret">🤫 One last secret</a>
 </nav>
 </header>
 
 <main>
 <section class="hero" id="home">
-<div class="moon">☾</div>
-<div class="eyebrow">for my favourite boy</div>
-<h1>Happy Birthday,<em>Bennu ♡</em></h1>
-<p class="intro">A little corner of the internet, made just for you. A tiny piece of my heart, in a place of its own.</p>
-<div class="date">12 · 10 · EVERY YEAR</div>
-<a class="btn primary" href="#letter">Enter our little world ↓</a>
-<p class="script">made with love, just for you</p>
+<div class="sticker">🎀</div>
+<div class="tiny">a tiny surprise for my favourite person</div>
+<h1>Happy Birthday,<br><em>Bennu ♡</em></h1>
+<p class="sub">A little scrapbook made of memories, silly moments, soft feelings and all the things I wish I could wrap up and give you.</p>
+<div class="date">♡ 12 OCTOBER ♡</div>
+<a class="btn primary" href="#letter">Open your little gift ↓</a>
+<p class="hand">made with all my love, just for you</p>
+<div class="sticker">🌷 ✧ 🧸</div>
+</section>
+
+<section id="letter">
+<div class="label">page 01 · a note from my heart</div>
+<h2>Dear <em>Bennu,</em></h2>
+<div class="paper">
+<div class="tape"></div>
+<p class="hand">My favourite boy,</p>
+<p>Happy birthday, my love. ♡</p>
+<p>I wanted to make you something that feels a little like me giving you a piece of my heart, so here is this tiny corner of the internet, just for you.</p>
+<p>Thank you for being part of my life, for the smiles, the conversations, the random little moments and the memories that mean more to me than I can always explain.</p>
+<p>I hope this year brings you closer to your dreams. I hope you laugh a little louder, worry a little less, feel proud of yourself, and discover so many reasons to be happy.</p>
+<p>And I hope we keep collecting moments together: the funny ones, the quiet ones, the unexpected ones, and the ones we'll remember years from now.</p>
+<p>No scrapbook could ever hold everything I feel, but I hope this little one reminds you how special you are to me.</p>
+<p class="hand">With all my love, always ♡</p>
+</div>
+</section>
+
+<section id="photos">
+<div class="label">page 02 · memories tucked between pages</div>
+<h2>Our little <em>scrapbook</em> 📸</h2>
+<p>Some pictures, some memories, and a million little feelings. Add your favourite photos to these frames when you're ready.</p>
+<div class="grid">
+<div class="polaroid"><img src="photo1.jpg" alt="Bennu's photo"><p>my favourite face ♡</p></div>
+<div class="polaroid"><img src="photo2.jpg" alt="A photo of us"><p>you + me</p></div>
+<div class="polaroid"><img src="photo3.jpg" alt="A special memory"><p>one for the heart</p></div>
+<div class="polaroid"><img src="photo4.jpg" alt="Another favourite photo"><p>our little world</p></div>
+</div>
+<p class="center hand">And this is only the beginning… ♡</p>
+</section>
+
+<section id="reasons">
+<div class="label">page 03 · tiny reasons, big feelings</div>
+<h2>Things I love <em>about you</em></h2>
+<div class="paper">
+<div class="reason"><span>♡</span>The way you make me smile without even trying.</div>
+<div class="reason"><span>♡</span>Your laugh and the little things that are so completely you.</div>
+<div class="reason"><span>♡</span>The memories that become special simply because you're in them.</div>
+<div class="reason"><span>♡</span>Your dreams, your effort, and the person you're becoming.</div>
+<div class="reason"><span>♡</span>The silly moments that wouldn't make sense to anyone else.</div>
+<div class="reason"><span>♡</span>The comfort of knowing I get to love you in my own little way.</div>
+<div class="reason"><span>♡</span>Simply because you're Bennu, and that's enough.</div>
+</div>
+<div class="note">💌 Little reminder: you don't have to be perfect to be loved. You can just be yourself.</div>
+</section>
+
+<section id="wishes">
+<div class="label">page 04 · wishes tied with pink ribbon</div>
+<h2>Things I wish <em>for you</em> 🎂</h2>
+<div class="note">🌷 A year full of happiness, peace and good health.</div>
+<div class="note">✨ The courage to go after the things you've always wanted.</div>
+<div class="note">🧸 More laughter, more adventures and fewer worries.</div>
+<div class="note">🌙 Someone to listen when life feels heavy, and people who celebrate you when life feels beautiful.</div>
+<div class="note">💕 A thousand small reasons to feel proud of the person you are becoming.</div>
+<p class="hand center">You deserve lovely things, Bennu. Today and always.</p>
+</section>
+
+<section class="center">
+<div class="label">page 05 · a little something extra</div>
+<h2>If I could wrap up <em>a feeling…</em></h2>
+<div class="paper">
+<div class="tape"></div>
+<p>I would wrap up every laugh you've given me, every moment that made me feel close to you, every little memory I replay in my head, and every wish I have for your future.</p>
+<p>I'd tie it all up with a pink ribbon and leave a tiny note saying: “I hope you know how much you mean to me.” ♡</p>
+</div>
+</section>
+
+<section id="secret">
+<div class="label">final page · just between us</div>
+<h2>There's one more <em>little secret…</em> 🤫</h2>
+<p class="center">You've reached the last page, but I saved one more letter just for you.</p>
+<div class="center"><button class="btn primary" id="openSecret">Open your secret letter ♡</button></div>
+<div class="paper secret" id="secretLetter">
+<div class="tape"></div>
+<h3 class="hand">Bennu, if you ever forget…</h3>
+<p>You are important. You are loved. And you don't have to achieve something extraordinary to deserve kindness, care, or happiness.</p>
+<p>On the days when you're proud of yourself, celebrate. On the days when things don't go your way, be gentle with yourself. You are still the same wonderful person on both kinds of days.</p>
+<p>I hope the coming year gives you beautiful surprises, new beginnings, and reasons to smile that you never saw coming.</p>
+<p>And if you ever wonder why I made this little website, it's simple: I wanted to give you something personal, something you could open and know that someone was thinking of you with a full heart.</p>
+<p class="hand">Happy birthday, my Bennu. Here's to your next chapter, and to all the memories still waiting for us. ♡</p>
+<p class="center">♡ ♡ ♡</p>
+</div>
+</section>
+
+<section class="center">
+<div class="sticker">🎀</div>
+<h2>To more memories <em>with you.</em></h2>
+<p>More sunsets, more silly conversations, more photos, more little adventures and more pages in our story.</p>
+<p class="hand">Happy birthday, Bennu. I love you. ♡</p>
+<a class="btn" href="#home">Back to the first page ↑</a>
+</section>
+</main>
+
+<footer>collected with love, tied with a pink ribbon ♡<br><small>made especially for Bennu · 12 October</small></footer>
+
+<audio id="music" src="music.mp3" loop preload="none"></audio>
+<button class="btn" id="musicButton">♫ Optional music</button>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const secret=document.getElementById('secretLetter');
+document.getElementById('openSecret').addEventListener('click',()=>{
+ const show=!secret.classList.contains('show');
+ secret.classList.toggle('show',show);
+ document.getElementById('openSecret').textContent=show?'Close your letter ♡':'Open your secret letter ♡';
+ if(show)secret.scrollIntoView({behavior:'smooth',block:'center'});
+});
+const music=document.getElementById('music');
+const musicButton=document.getElementById('musicButton');
+musicButton.addEventListener('click',async()=>{
+ if(music.paused){
+  try{await music.play();musicButton.textContent='♫ Pause music'}
+  catch(e){musicButton.textContent='♫ Add music.mp3 first'}
+ }else{music.pause();musicButton.textContent='♫ Optional music'}
+});
+</script>
+</body>
+</html>
+
 </section>
 
 <section id="letter">
